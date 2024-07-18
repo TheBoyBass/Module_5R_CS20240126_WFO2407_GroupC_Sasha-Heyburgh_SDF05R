@@ -52,3 +52,35 @@ p {
 }
 
 /* Add your custom styles for btn-1, btn-2, and btn-3 */
+
+.btn-1{
+    background-color: #f1c40f;
+    border: none;
+    z-index: 1;
+}
+.btn-1:after {
+    position: absolute;
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 8px;
+    transition: all 0.3s ease-in;
+}
+
+.btn-1:hover {
+    color: #d900ff;
+    background-image: linear-gradient(210deg, #ead818 5%, hsl(256, 94%, 80%) 75%);
+}
+
+.btn-1:hover:after {
+    height: 100%;
+    bottom: 0;
+    top: auto;
+
+}
+
+.btn-1:active {
+    box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,.5);
+}
