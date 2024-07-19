@@ -53,11 +53,14 @@ p {
 
 /* Add your custom styles for btn-1, btn-2, and btn-3 */
 
+/* setting the default button styles */
 .btn-1{
     background-color: #f1c40f;
     border: none;
     z-index: 1;
 }
+
+/* Creating a new element after the preset button element which will be used to apply a gradient effect on hover */
 .btn-1:after {
     position: absolute;
     width: 100%;
@@ -69,11 +72,13 @@ p {
     transition: all 0.3s ease;
 }
 
+/* Targeting the button while on hover to change the text color and background image to a gradient */
 .btn-1:hover {
     color: #d900ff;
     background-image: linear-gradient(210deg, #ead818 5%, hsl(256, 94%, 80%) 75%);
 }
 
+/* Targeting the new element button while on hover to make sure the element covers the entire button */
 .btn-1:hover:after {
     height: 100%;
     bottom: 0;
@@ -81,10 +86,13 @@ p {
 
 }
 
+/* Adding  an inset box shadow to the button to give it a pressed apearence when clicked by targeting the button when its active  */
 .btn-1:active {
     box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,.5);
 }
 
+
+/* setting the default button styles */
 .btn-2 {
     color: #eeefed;
     border: none;
@@ -92,6 +100,7 @@ p {
     overflow: hidden;
 }
 
+/* Creating a new element after the preset button element which will be used to apply a gradient effect */
 .btn-2:after {
     position: absolute;
     content: "";
@@ -105,18 +114,24 @@ p {
 
 }
 
+
+/* Targeting the new element button while being clicked and changes the bacground and sets the box shadow effect for the button */
 .btn-2:active{
     background: transparent;
     box-shadow: 4px 4px 6px 0 rgba(149, 255, 0, 0.795), -4px -4px 6px 0 rgba(0, 152, 28, 0.475), inset -4px -4px 6px 0 rgba(43, 80, 8, 0.5), inset 4px 4px 6px 0 rgba(116, 125, 136, .1);
 
 }
 
+
+/* Targeting the new element created after the main element when the button is hovered over. This scales the element twice and rotates it by 200 degrees to create a rotating effect when the button is hovered over */
 .btn-2:hover:after{
     -webkit-transform: scale(2) rotate(200deg);
     transform: scale(2) rotate(200deg);
 }
 
 
+
+/* setting the default button styles */
 .btn-3 {
     position: relative;
     border: none;
@@ -125,12 +140,16 @@ p {
     background: linear-gradient(20deg, pink 75%, white 80%);
 }
 
+
+/* Targeting the main selector element button while on hover to change the background gradient and adding a shadow to the box*/
 .btn-3:hover{
     color: rgb(255, 0, 153);
     background: linear-gradient(20deg, white 75%, pink 80%);
     box-shadow: #000;
 }
 
+
+/* creating a new element after the button which will the be shown during the hover effect */
 .btn-3:after{
     content: "";
     position: absolute;
@@ -146,6 +165,7 @@ p {
     transition: 0.3s ease all;
 }
 
+/* Targeting the new element created after the main element when the button is hovered over. This scales the Pink Line for 100% of the buttons width */
 .btn-3:hover:after{
     width: 100%;
     transition: 0.6s ease all;
